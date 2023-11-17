@@ -1,8 +1,3 @@
-import streamlit as st
-import sys
-
-# Print Python version
-st.write("Python version:", sys.version)
 
 import pandas as pd
 import streamlit as st
@@ -18,12 +13,6 @@ st.code("pip install pandas streamlit matplotlib seaborn")
 # Once the installation is complete, remove the installation message
 st.success("Dependencies installed successfully!")
 st.balloons()
-
-
-# Load data from GitHub
-url = "https://raw.githubusercontent.com/fulazz/911-dashboard/main/shopping_new.csv" 
-df = pd.read_csv(url)
-
 
 # Load data from GitHub
 url = "https://raw.githubusercontent.com/fulazz/911-dashboard/main/shopping_new.csv"
