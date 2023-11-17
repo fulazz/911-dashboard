@@ -21,7 +21,7 @@ st.balloons()
 
 
 # Load data from GitHub
-url = "https://raw.githubusercontent.com/your-username/your-repository/master/shopping_new.csv"
+url = "https://raw.githubusercontent.com/fulazz/911-dashboard/main/shopping_new.csv" 
 df = pd.read_csv(url)
 
 
