@@ -1,3 +1,9 @@
+import streamlit as st
+import sys
+
+# Print Python version
+st.write("Python version:", sys.version)
+
 import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
