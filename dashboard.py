@@ -10,15 +10,7 @@ url = "https://raw.githubusercontent.com/fulazz/911-dashboard/main/shopping_new.
 df = pd.read_csv(url, low_memory=False)  # Add low_memory=False to handle DtypeWarning
 
 # Create a Streamlit app
-st.title("Shopping Dashboard")
-
-# Display some basic information about the data
-st.write("### Sample Data:")
-st.dataframe(df.head())
-
-# Summary Statistics
-st.write("### Summary Statistics:")
-st.write(df.describe())
+st.title("E-Commerce Public Dataset Dashboard")
 
 # Visualize product category distribution
 st.write("### Product Category Distribution:")
