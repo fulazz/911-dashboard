@@ -13,8 +13,8 @@ st.title("E-Commerce Public Dataset Dashboard")
 st.write("### Product Category Distribution:")
 
 # Use plotly express to create a bar chart
-fig_category = px.bar(df['product_category_name'].value_counts().reset_index(), x='index', y='product_category_name',
-                      labels={'index': 'Product Category', 'product_category_name': 'Count'},
+fig_category = px.bar(df['product_category_name'].value_counts(), x=df['product_category_name'].value_counts().index, y='product_category_name',
+                      labels={'x': 'Product Category', 'product_category_name': 'Count'},
                       title='Product Category Distribution')
 
 # Display the plot using st.plotly_chart
