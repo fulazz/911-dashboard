@@ -20,6 +20,7 @@ sns.countplot(data=df, y='product_category_name', order=df['product_category_nam
 plt.xlabel('Count')
 plt.ylabel('Product Category')
 st.pyplot()
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # Display the raw data (optional)
 if st.checkbox("Show Raw Data"):
