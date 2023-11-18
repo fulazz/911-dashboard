@@ -56,3 +56,5 @@ st.plotly_chart(fig4)
 
 # Run the Streamlit app
 st.show()
+ # Prevent the error from propagating into your Streamlit app.
+pass
