@@ -19,8 +19,13 @@ plt.figure(figsize=(10, 6))
 sns.countplot(data=df, y='product_category_name', order=df['product_category_name'].value_counts().index)
 plt.xlabel('Count')
 plt.ylabel('Product Category')
-st.pyplot()
+
+# Disable the PyplotGlobalUseWarning
 st.set_option('deprecation.showPyplotGlobalUse', False)
+
+# Display the plot
+st.pyplot()
+
 
 # Display the raw data (optional)
 if st.checkbox("Show Raw Data"):
