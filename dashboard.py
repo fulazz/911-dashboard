@@ -4,14 +4,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
 
-# Install necessary packages
-st.title("Installing Dependencies")
-st.write("This may take a minute.")
-st.info("Installing dependencies...")
-st.code("pip install pandas streamlit matplotlib seaborn")
-
-# Once the installation is complete, remove the installation message
-st.success("Dependencies installed successfully!")
 st.balloons()
 
 # Load data from GitHub
@@ -19,15 +11,7 @@ url = "https://raw.githubusercontent.com/fulazz/911-dashboard/main/shopping_new.
 df = pd.read_csv(url, low_memory=False)  # Add low_memory=False to handle DtypeWarning
 
 # Create a Streamlit app
-st.title("Shopping Dashboard")
-
-# Display some basic information about the data
-st.write("### Sample Data:")
-st.dataframe(df.head())
-
-# Summary Statistics
-st.write("### Summary Statistics:")
-st.write(df.describe())
+st.title("E-Commerce Dashboard")
 
 # Visualize product category distribution
 st.write("### Product Category Distribution:")
@@ -44,9 +28,6 @@ if st.checkbox("Show Raw Data"):
 
 # Convert 'order_estimated_delivery_date' to datetime
 df['order_estimated_delivery_date'] = pd.to_datetime(df['order_estimated_delivery_date'])
-
-# Streamlit App
-st.title('Olist E-commerce Dashboard')
 
 # Bar chart comparing seller_state and customer_state
 fig1 = px.bar(df, x=['seller_state', 'customer_state'], title='Seller State vs Customer State')
