@@ -6,12 +6,8 @@ import plotly.express as px
 
 st.balloons()
 
-# Configuration
-st.set_page_config(
-    page_title="E-Commerce Dashboard",
-    page_icon="👋",
-    layout='wide',
-)
+# Create a Streamlit app
+st.title("E-Commerce Dashboard")
 
 # Load data from GitHub
 url = "https://raw.githubusercontent.com/fulazz/911-dashboard/main/shopping_new.csv"
@@ -58,4 +54,4 @@ monthly_income = df.groupby('month_year')['price'].sum().reset_index()
 fig4 = px.bar(monthly_income, x='month_year', y='price', title='Monthly Income')
 st.plotly_chart(fig4)
 
-
+streamlit run dashboard.py
