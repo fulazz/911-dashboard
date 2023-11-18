@@ -13,8 +13,8 @@ st.title("E-Commerce Public Dataset Dashboard")
 st.write("### Product Category Distribution:")
 
 # Use plotly express to create a bar chart
-fig_category = px.bar(df['product_category_name'].value_counts(), x=df['product_category_name'].value_counts().index, y='product_category_name',
-                      labels={'x': 'Product Category', 'product_category_name': 'Count'},
+fig_category = px.bar(df['product_category_name'].value_counts().reset_index(), x='index', y='product_category_name',
+                      labels={'index': 'Product Category', 'product_category_name': 'Count'},
                       title='Product Category Distribution')
 
 # Display the plot using st.plotly_chart
@@ -41,8 +41,8 @@ st.plotly_chart(fig_order_trend)
 
 # Bar chart showing top 5 product sells
 st.title('Olist E-commerce Dashboard: Top 5 Product Sells')
-top_products = df['product_category_name'].value_counts().head(5)
-fig_top_products = px.bar(top_products, x=top_products.index, y=top_products.values, title='Top 5 Product Sells')
+top_products = df['product_category_name'].value_counts().head(5).reset_index()
+fig_top_products = px.bar(top_products, x='index', y='product_category_name', title='Top 5 Product Sells')
 st.plotly_chart(fig_top_products)
 
 # Monthly income from variable price and order_estimated_delivery_date
