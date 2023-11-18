@@ -4,15 +4,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
 
-# Install necessary packages
-st.title("Installing Dependencies")
-st.write("This may take a minute.")
-st.info("Installing dependencies...")
-st.code("pip install pandas streamlit matplotlib seaborn")
-
-# Once the installation is complete, remove the installation message
-st.success("Dependencies installed successfully!")
-st.balloons()
 
 # Load data from GitHub
 url = "https://raw.githubusercontent.com/fulazz/911-dashboard/main/shopping_new.csv"
