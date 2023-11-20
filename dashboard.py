@@ -55,4 +55,4 @@ fig4 = px.bar(monthly_income, x='month_year', y='price', title='Monthly Income')
 st.plotly_chart(fig4)
 
 # Run the Streamlit app
-st.show()
+st.pyplot()
